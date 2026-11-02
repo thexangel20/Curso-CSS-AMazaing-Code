@@ -1,0 +1,56 @@
+/* Este es un selector de etiqueta => menor especifidad*/
+h1 {
+    color: red;
+}
+
+/* Este es un selector de clase => especifidad intermedia*/
+.title {
+    color: green;
+}
+
+/* Este es un selector de ID => Mayor especifidad*/
+#main-title {
+    color: purple;
+    font-family: "JetBrains Mono", monospace;
+}
+
+body {
+    background-color: black;
+}
+
+.white {
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.purple {
+    color: purple;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.big {
+    font-size: 20px;
+}
+
+.purple.big {
+    font-size: 80px;
+}
+
+#main-section {
+    border: 3px solid white;
+}
+
+/*Selector mas especifico: selecciona los p que sean hijos directos de la seccion, mas no los del div*/
+#main-section > p {
+    margin-left: 20px;
+}
+
+/* '+' es para el hermano adyacente*/
+h3 + p {
+    border-bottom: 2px solid white;
+}
+
+/*'~' es para todos los hermanos*/
+h3 ~ p {
+    border-top: 2px dotted orange;
+}
