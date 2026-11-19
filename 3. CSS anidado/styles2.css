@@ -1,0 +1,71 @@
+/* Este es un selector de etiqueta => menor especifidad*/
+h1 {
+    color: red;
+}
+
+/* Este es un selector de clase => especifidad intermedia*/
+.title {
+    color: green;
+}
+
+/* Este es un selector de ID => Mayor especifidad*/
+#main-title {
+    color: purple;
+    font-family: "JetBrains Mono", monospace;
+}
+
+body {
+    background-color: black;
+}
+
+.white {
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.purple {
+    color: purple;
+    font-family: "JetBrains Mono", monospace;
+}
+
+p {
+    color: blue !important;
+}
+
+.big {
+    font-size: 20px;
+}
+
+.purple.big {
+    font-size: 80px;
+}
+
+#main-section {
+    border: 3px solid white;
+}
+
+#main-section {
+    p {
+      border-left: 5px solid red;
+    }
+
+  > p {
+      margin-left: 20px;
+    }
+}
+
+h3 {
+    /* '+' es para el hermano adyacente*/
+    + p {
+        border-bottom: 2px solid white;
+    }
+    /*'~' es para todos los hermanos*/
+    ~ p {
+        border-top: 2px dotted orange;
+    }
+}
+
+input[type="text"] { /*Al especificar el tipo de input, solo afectara a estos*/
+    padding: 15px; /*Para especificar el tamaño del margen interno*/
+}
+
